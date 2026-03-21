@@ -14,7 +14,7 @@
 
 <!-- NAVBAR -->
 <nav>
-  <a href="#landing" class="btn-register">Register Now</a>
+  <img src="assets/utkansh_logo.png" alt="Register" class="nav-register-img">
     <div class="menu-toggle">☰</div>
   <div class="nav-links">
     <a href="#landing">CTF</a>
@@ -30,7 +30,9 @@
   <div class="hero-inner">
     <div class="crt-monitor">
       <p class="terminal-prompt">> SYSTEM BOOT... <span>OK</span> | CHALLENGE LOADED... <span>OK</span></p>
-      <p class="hero-label">UTKANSH 2026</p>
+      <p class="hero-label">
+  UTKANSH 2026 <span>presents</span>
+</p>
       <h1 class="hero-title">ROOTBREACH</h1>
       <p class="hero-tagline">Capture The Flag</p>
       <p class="hero-prize">₹10 Lakh+ WORTH PRIZES</p>
@@ -65,9 +67,23 @@
         <span class="hero-tag">FORENSICS</span>
         <span class="hero-tag">MISC</span>
       </div>
-      <a href="https://www.utkansh.com/events/tech-cod-2" class="btn-cta">Register Before March 26</a>
-      <br> <br>
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSclqPDXq4Pr7eMh1rQsEfszffg6_2_uz47Mj0pNcskuEX2EDA/viewform" class="btn-cta">Fill Google Form</a>
+<div class="registration-box">
+  <p class="reg-title">Registration Process</p>
+
+  <div class="reg-step">
+    <span class="step-num">01</span>
+    <a href="https://www.utkansh.com/events/tech-cod-2" target="_blank">
+      Register on Utkansh Website
+    </a>
+  </div>
+
+  <div class="reg-step">
+    <span class="step-num">02</span>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSclqPDXq4Pr7eMh1rQsEfszffg6_2_uz47Mj0pNcskuEX2EDA/viewform" target="_blank">
+      Fill the Google Form to Confirm
+    </a>
+  </div>
+</div>
 <br><br>
 <div class="hero-venue bottom-left">
   <div><span>OPENING:</span> Central Seminar Hall, NITJ</div>
@@ -77,19 +93,50 @@
   </div>
 </section>
 
+<!-- PERKS -->
+<section id="perks">
+  <h2 class="section-header" style="color:var(--green)">Perks</h2>
+
+  <div class="perks-grid">
+    
+    <div class="perk-card">
+      <div class="perk-icon">🎸</div>
+      <div class="perk-title">Mohit Chauhan Concert</div>
+      <div class="perk-desc">
+Attend the concert night featuring Mohit Chauhan as star artist
+      </div>
+    </div>
+
+    <div class="perk-card">
+      <div class="perk-icon">🔗</div>
+      <div class="perk-title">Networking Opportunity</div>
+      <div class="perk-desc">
+        You'd get to network with people from industry including cybersecurity professionals and ethical hackers
+      </div>
+    </div>
+
+    <div class="perk-card">
+  <div class="perk-icon">👾</div>
+  <div class="perk-title">Attend Utkansh Fest</div>
+  <div class="perk-desc">
+    Attend North-India's one of most biggest Annual Techno-Cultural Festival Utkansh
+  </div>
+</div>
+
+  </div>
+</section>
 <!-- RULES, STAGES, PRIZES -->
 <section id="rules_prizes" style="padding: 80px 5vw;">
   <!-- Rules -->
   <div>
     <h2 class="rules-title section-header" style="color:var(--pink)">Rules of Engagement</h2>
+    <a href="assets/rulebook.pdf" class="btn-rulebook" target="_blank">
+  ⬇ Download Rulebook
+</a>
     <div id="rules-list">
       <div class="rule-item">
         <span class="rule-icon">⚠</span>
-        <span>Do not attack the competition infrastructure.</span>
-      </div>
-      <div class="rule-item">
-        <span class="rule-icon">⚠</span>
-        <span>Sharing flags is strictly prohibited.</span>
+        <span>All flags follow the standard format: CSC{f1ag_h3r3}</span>
       </div>
       <div class="rule-item">
         <span class="rule-icon">⚠</span>
@@ -97,7 +144,20 @@
       </div>
       <div class="rule-item">
         <span class="rule-icon">⚠</span>
-        <span>All players must verify Booking ID.</span>
+        <span>Sharing flags, hints or write-ups is strictly prohibited.</span>
+      </div>
+      <div class="rule-item">
+        <span class="rule-icon">⚠</span>
+        <span>Do not attack the competition infrastructure, immediate disqualification</span>
+      </div>
+      
+      <div class="rule-item">
+        <span class="rule-icon">⚠</span>
+        <span>Points are awarded based on challenge difficulty</span>
+      </div>
+      <div class="rule-item">
+        <span class="rule-icon">⚠</span>
+        <span>In case of a tie, the team that reaches the final score earlier will be ranked higher.</span>
       </div>
     </div>
   </div>
@@ -109,35 +169,37 @@
       <div class="stage-item">
         <div class="stage-line"><div class="stage-num">01</div><div class="stage-connector"></div></div>
         <div class="stage-content">
-          <div class="stage-title">Hackerrank Coding Round</div>
-          <div class="stage-desc">Information gathering and OSINT challenges.</div>
+          <div class="stage-title">CodeIgnite</div>
+          <div class="stage-desc">Participants solve problem-solving and security-focused
+challenges.</div>
         </div>
       </div>
       <div class="stage-item">
         <div class="stage-line"><div class="stage-num">02</div><div class="stage-connector"></div></div>
         <div class="stage-content">
-          <div class="stage-title">Cryptography</div>
-          <div class="stage-desc">Crack encryption and decode secrets</div>
+          <div class="stage-title">FlagForge</div>
+          <div class="stage-desc">fixed-scoring challenge round across multiple
+cybersecurity domains.</div>
         </div>
       </div>
       <div class="stage-item">
         <div class="stage-line"><div class="stage-num">03</div><div class="stage-connector"></div></div>
         <div class="stage-content">
-          <div class="stage-title">Reverse Engineering/ Priv Escalation</div>
-          <div class="stage-desc">Analyze binaries, exploit the logic and pave your way to root</div>
+          <div class="stage-title">SpeedBreach</div>
+          <div class="stage-desc">Break Encryption, Analyze binaries, exploit the logic and pave your way to root</div>
         </div>
       </div>
       <div class="stage-item">
         <div class="stage-line"><div class="stage-num">04</div><div class="stage-connector"></div></div>
         <div class="stage-content">
-          <div class="stage-title">Web Exploitation</div>
+          <div class="stage-title">VulnHunt</div>
           <div class="stage-desc">Break web apps, find vulnerabilities and capture the flag.</div>
         </div>
       </div>
       <div class="stage-item">
         <div class="stage-line"><div class="stage-num">05</div></div>
         <div class="stage-content">
-          <div class="stage-title">Final Boss</div>
+          <div class="stage-title">SecureShield</div>
           <div class="stage-desc">Fix broken code of a web app</div>
         </div>
       </div>
@@ -151,19 +213,18 @@
     <div class="prize-card first">
       <div class="prize-pos">1st</div>
       <div class="prize-title">Grand Prize</div>
-      <div class="prize-reward">CRTP Certification Voucher</div>
-      <div class="prize-reward">Github Copilot Enterprise Licenses</div>
+      <div class="prize-reward">To Be Announced</div>
     
     </div>
     <div class="prize-card second">
       <div class="prize-pos">2nd</div>
       <div class="prize-title">Runner Up</div>
-      <div class="prize-reward">Github Copilot Enterprise Licenses</div>
+      <div class="prize-reward">To Be Announced</div>
     </div>
     <div class="prize-card third">
       <div class="prize-pos">3rd</div>
       <div class="prize-title">Third Place</div>
-      <div class="prize-reward">Github Copilot Enterprise Licenses</div>
+      <div class="prize-reward">To Be Announced</div>
     </div>
   </div>
   </div>
@@ -196,7 +257,6 @@
     <div class="sponsor-card">
         <img src="assets/greensole.png" alt="Altered Security">
         <span>GreenSole</span></div>
-    </div>
     <div class="sponsor-card">
         <img src="assets/cybermindspace.png" alt="Altered Security">
         <span>Cyber Mind Space</span></div>
@@ -233,7 +293,8 @@
 <!-- FOOTER -->
 <footer id="about">
     <h2 class="section-header " style="color:var(--green)">Contact Us</h2>
-  <a class="footer-email" href="mailto:cybersecurityclub@nitj.ac.in">cybersecurityclub@nitj.ac.in</a>
+  
+    <a class="footer-email" href="mailto:cybersecurityclub@nitj.ac.in">cybersecurityclub@nitj.ac.in</a>
   <div class="footer-left">
     <a class="social-btn" href="https://www.linkedin.com/company/cyber-security-club-nitj">LinkedIn</a>
     <a class="social-btn" href="https://www.instagram.com/csc_nitj/">Instagram</a>

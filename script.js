@@ -32,7 +32,7 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 
 document.querySelectorAll('.reveal, .rule-item, .stage-item, .prize-card, .faq-item').forEach((el, i) => {
-  el.style.transitionDelay = (i * 0.06) + 's';
+  el.style.transitionDelay = (i * 0.02) + 's';
   observer.observe(el);
 });
 
