@@ -312,10 +312,17 @@
 .hero-label span {
   display: block;
   font-size: 0.85em;     /* slightly smaller but same vibe */
-  color: inherit;        /* 💥 SAME COLOR */
-  text-shadow: inherit;  /* 💥 SAME GLOW */
+  color: inherit;        
+  text-shadow: inherit; 
   letter-spacing: inherit;
   margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+  .crt-monitor {
+    padding: 30px 16px;   /* reduce padding */
+    border-width: 2px;
+  }
 }
 @media (max-width: 768px) {
   .hero-label {
