@@ -127,14 +127,15 @@
   transition: all 0.2s ease;
 
   filter: brightness(1.2);
-}
-
-/* hover effect */
 .nav-register-img:hover {
   transform: scale(1.05);
   filter: brightness(1.5);
 }
-/* Keep links centered */
+@media (max-width: 768px) {
+  .nav-register-img {
+    display: none;
+  }
+}
 
 .nav-links {
   display: flex;
