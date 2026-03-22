@@ -136,28 +136,11 @@
 }
 /* Keep links centered */
 
-.nav-register-img {
-  height: 40px;          /* control size */
-  width: auto;
-  object-fit: contain;
-
-  cursor: pointer;
-  transition: all 0.2s ease;
-
-  filter: brightness(1.2);
-}
-
-/* hover effect */
-.nav-register-img:hover {
-  transform: scale(1.05);
-  filter: brightness(1.5);
-}
-
 .nav-links {
   display: flex;
   gap: 25px;
   justify-content: center;
-  flex: 1; 
+  flex: 1; /* 🔥 this keeps it centered */
 }
 
 /* Prevent logo from wrapping */
@@ -313,14 +296,13 @@
     font-size: 9px;
     letter-spacing: 2px;
   }
-  
 .hero-label {
   font-family: 'Orbitron', sans-serif;
   font-size: clamp(1.6rem, 3vw, 2.4rem);
   font-weight: 700;
   letter-spacing: 4px;
 
-  color: var(--purple);  
+  color: var(--purple);  /* 🔥 different from ROOTBREACH (green) */
   text-shadow: 0 0 12px var(--purple), 0 0 28px rgba(176,38,255,0.4);
 
   margin-bottom: 12px;
@@ -331,11 +313,17 @@
   display: block;
   font-size: 0.85em;     /* slightly smaller but same vibe */
   color: inherit;        
-  text-shadow: inherit;  
+  text-shadow: inherit; 
   letter-spacing: inherit;
   margin-top: 4px;
 }
 
+@media (max-width: 768px) {
+  .crt-monitor {
+    padding: 30px 16px;   /* reduce padding */
+    border-width: 2px;
+  }
+}
 @media (max-width: 768px) {
   .hero-label {
     font-size: 1.4rem;
@@ -457,42 +445,7 @@
     color: var(--green);
     background: var(--green-dim);
   }
-
-  .btn-cta {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-  .btn-cta {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 0.85rem;
-    font-weight: 900;
-    letter-spacing: 3px;
-    color: var(--bg);
-    background: var(--green);
-    border: none;
-    padding: 16px 40px;
-    cursor: pointer;
-    clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%);
-    box-shadow: 0 0 24px var(--green), 0 0 48px rgba(57,255,20,0.3);
-    text-decoration: none;
-    display: inline-block;
-    transition: all 0.2s;
-    animation: pulse-glow 2.5s ease-in-out infinite;
-  }
-
-  @keyframes pulse-glow {
-    0%,100% { box-shadow: 0 0 24px var(--green), 0 0 48px rgba(57,255,20,0.3); }
-    50% { box-shadow: 0 0 36px var(--green), 0 0 72px rgba(57,255,20,0.5); }
-  }
-
-  .btn-cta:hover {
-    background: var(--bg);
-    color: var(--green);
-  }
-
-  .registrat.registration-box {
+.registration-box {
   border: 1px solid var(--green);
   background: rgba(57,255,20,0.06);
   padding: 24px 28px;
@@ -502,7 +455,34 @@
   box-shadow: 0 0 20px rgba(57,255,20,0.15),
               inset 0 0 30px rgba(57,255,20,0.05);
 }
+.reg-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 4px;
 
+  color: var(--green);
+  text-shadow: 
+    0 0 10px var(--green),
+    0 0 20px rgba(57,255,20,0.4);
+
+  text-align: right;
+  margin-bottom: 20px;
+
+  position: relative;
+}
+
+/* glowing line on left for style */
+.reg-title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--green));
+  opacity: 0.4;
+}
 /* TITLE */
 .reg-title {
   font-family: 'Orbitron', sans-serif;
@@ -567,18 +547,30 @@
   color: var(--green);
   text-shadow: 0 0 8px var(--green);
 }
-
-
 @media (max-width: 768px) {
   .registration-box {
-    width: 90%;
-    padding: 16px;
+    width: 92%;
+    padding: 18px;
   }
 
-  .reg-title {
-    text-align: center;
+  .reg-step {
+    padding: 10px;
+  }
+
+  .step-num {
+    font-size: 0.8rem;
   }
 }
+
+  @keyframes pulse-glow {
+    0%,100% { box-shadow: 0 0 24px var(--green), 0 0 48px rgba(57,255,20,0.3); }
+    50% { box-shadow: 0 0 36px var(--green), 0 0 72px rgba(57,255,20,0.5); }
+  }
+
+  .btn-cta:hover {
+    background: var(--bg);
+    color: var(--green);
+  }
 
   /* ─── SECTION WRAPPER ─── */
   section {
@@ -617,7 +609,7 @@
     opacity: 0.3;
   }
 
-  /* ─── PERKS SECTION ─── */
+/* ─── PERKS SECTION ─── */
 
 #perks {
   border-top: 1px solid var(--border);
@@ -628,11 +620,18 @@
 /* Grid layout */
 .perks-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 
-/* Mobile fix */
+/* Tablet */
+@media(max-width: 900px) {
+  .perks-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
 @media(max-width: 768px) {
   .perks-grid {
     grid-template-columns: 1fr;
@@ -683,28 +682,8 @@
   letter-spacing: 0.5px;
 }
 
-.perks-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
-
-/* Tablet */
-@media(max-width: 900px) {
-  .perks-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Mobile */
-@media(max-width: 768px) {
-  .perks-grid {
-    grid-template-columns: 1fr;
-  }
-}
 
   /* ─── RULES & STAGES ─── */
-
   #rules_prizes {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -716,7 +695,6 @@
     #rules_prizes { grid-template-columns: 1fr; }
   }
 
-  
   /* Rules */
   .btn-rulebook {
   display: inline-block;
@@ -1261,3 +1239,4 @@
     margin-top: 20px;
   }
 }
+
