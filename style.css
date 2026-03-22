@@ -147,6 +147,12 @@
 .nav-logo {
   white-space: nowrap;
 }
+@media (max-width: 768px) {
+  .nav-logo {
+    content: url("assets/utkansh_logo.png");
+    height: 45px; /* tweak if needed */
+  }
+}
 .nav-links a {
   font-size: 0.65rem;
   letter-spacing: 1px;
