@@ -1,5 +1,5 @@
 
-const target = new Date('2026-03-28T10:00:00+05:30');
+const target = new Date('2026-03-28T09:00:00+05:30');
 function updateCountdown() {
   const now = new Date();
   const diff = target - now;
